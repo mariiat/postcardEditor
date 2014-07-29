@@ -1,0 +1,214 @@
+$icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
+// bower:scss
+@import "bootstrap-sass-official/assets/stylesheets/bootstrap.scss";
+// endbower
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Custom page header */
+.header {
+    border-bottom: 1px solid #e5e5e5;
+
+    /* Make the masthead heading the same height as the navigation */
+    h3 {
+        margin-top: 0;
+        margin-bottom: 0;
+        line-height: 40px;
+        padding-bottom: 19px;
+    }
+}
+
+/* Custom page footer */
+.footer {
+    padding-top: 19px;
+    color: #777;
+    border-top: 1px solid #e5e5e5;
+}
+
+.container-narrow > hr {
+    margin: 30px 0;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+    text-align: center;
+    border-bottom: 1px solid #e5e5e5;
+
+    .btn {
+        font-size: 21px;
+        padding: 14px 24px;
+    }
+}
+
+/* Supporting marketing content */
+.marketing {
+    margin: 40px 0;
+
+    p + h4 {
+        margin-top: 28px;
+    }
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+    .container {
+        max-width: 730px;
+    }
+
+    /* Remove the padding we set earlier */
+    .header,
+    .marketing,
+    .footer {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    /* Space out the masthead */
+    .header {
+        margin-bottom: 30px;
+    }
+    /* Remove the bottom border on the jumbotron for visual effect */
+    .jumbotron {
+        border-bottom: 0;
+    }
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body, .fit {
+    height: 100%;
+}
+
+.container {
+    min-height: 100%;
+    height: 100%;
+    width: 100%;
+    min-width: 100%;
+    position: relative;
+    padding: 0;
+
+    .viewport {
+        height: 100%;
+        width: 100%;
+        background-color: #D8E9EF;
+
+        .postcard-container {
+            padding: 20px!important;
+            position: relative;
+            height: 80%;
+
+            .postcard-wrapper {
+                height: 100%;
+                background-color: #FFFFFF;
+                position: relative;
+                overflow: auto;
+            }
+        }
+
+        .buttons-container {
+            height: 20%;
+            text-align: center;
+            padding: 10px;
+        }
+    }
+}
+
+
+$postcardWidth: 400px;
+$postcardHeight: 200px;
+$postcardPartTop: 18px;
+
+.postcard {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: - $postcardHeight / 2;
+    margin-left: - $postcardWidth / 2;
+
+    width: $postcardWidth;
+    height: $postcardHeight;
+
+    .face, .back {
+        height: 100%;
+        position: relative;
+        overflow: visible;
+
+        .left, .center, .right {
+            float: left;
+            border: 1px solid black;
+            height: 100%;
+        }
+        .left {
+            width: 25%;
+            position: relative;
+        }
+
+        .center {
+            width: 50%;
+        }
+
+        .right {
+            width: 25%;
+            position: relative;
+        }
+    }
+
+    .face {
+        .left, .center, .right {
+            background-color: #00b3ee;
+        }
+
+        .left {
+            top: -$postcardPartTop;
+            transform:skew(0, 20deg);
+            -ms-transform:skew(0, 20deg);
+            -webkit-transform:skew(0, 20deg);
+        }
+
+        .right {
+            top: -$postcardPartTop;
+            transform:skew(0, 340deg);
+            -ms-transform:skew(0, 340deg);
+            -webkit-transform:skew(0, 340deg);
+        }
+    }
+
+    .back {
+        .left, .center, .right {
+            background-color: #CDCDCD;
+        }
+
+        .left {
+            top: $postcardPartTop;
+            transform:skew(0, 340deg);
+            -ms-transform:skew(0, 340deg);
+            -webkit-transform:skew(0, 340deg);
+        }
+
+        .right {
+            top: $postcardPartTop;
+            transform:skew(0, 20deg);
+            -ms-transform:skew(0, 20deg);
+            -webkit-transform:skew(0, 20deg);
+        }
+    }
+
+    .text-block {
+        padding: 5px;
+        text-align: center;
+        word-break: normal;
+    }
+}

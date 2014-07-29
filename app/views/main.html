@@ -1,0 +1,19 @@
+<div class="viewport">
+    <div class="postcard-container">
+        <div class="postcard-wrapper">
+            <postcard is-face="isFace"
+                      angle="angle">
+            </postcard>
+        </div>
+    </div>
+
+    <div class="buttons-container"
+         ng-controller="ButtonsCtrl">
+
+        <button ng-click="zoomIn()">Zoom In</button>
+        <button ng-click="zoomOut()">Zoom Out</button>
+        <button ng-click="rotate()">Rotate</button>
+        <button ng-click="flip()">Flip</button>
+        <button ng-click="addTextBlock()">Add Text Block</button>
+    </div>
+</div>

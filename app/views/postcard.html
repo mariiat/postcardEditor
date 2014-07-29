@@ -1,0 +1,25 @@
+<div class="postcard">
+    <div ng-show="isFace === true"
+         class="face">
+        <div class="left"></div>
+        <div class="center">
+            <div ng-repeat="tb in textBlocksFace">
+                <text-block></text-block>
+            </div>
+        </div>
+        <div class="right"></div>
+    </div>
+
+
+    <div ng-show="isFace === false"
+         class="back">
+
+        <div class="left"></div>
+        <div class="center">
+            <div ng-repeat="tb in textBlocksBack">
+                <text-block></text-block>
+            </div>
+        </div>
+        <div class="right"></div>
+    </div>
+</div>
